@@ -1,5 +1,0 @@
-class TopRollerderbyLeagues::Details
-
-  
-
-end
