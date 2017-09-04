@@ -31,12 +31,7 @@ class TopRollerderbyLeagues::CLI
 
       def league_list
         puts ""
-        puts <<~DOC
-        1. Victorian Roller Derby
-        2. Rose City Rollers
-        3. Gotham Girls Roller Derby
-        4. Angel City Derby Girls
-        DOC
+        @list = TopRollerderbyLeagues::League.list
 
       end
 
