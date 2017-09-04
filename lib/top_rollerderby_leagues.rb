@@ -1,5 +1,9 @@
-require "top_rollerderby_leagues/version"
 
-module TopRollerderbyLeagues
-  # Your code goes here...
-end
+require 'pry'
+require 'nokogiri'
+require 'open-uri'
+
+require "top_rollerderby_leagues/version"
+require_relative 'top_rollerderby_leagues/league'
+require_relative 'top_rollerderby_leagues/details'
+require_relative './top_rollerderby_leagues/cli'

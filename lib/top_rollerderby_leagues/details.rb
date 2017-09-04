@@ -1,0 +1,3 @@
+class TopRollerderbyLeagues::Details
+
+end
