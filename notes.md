@@ -6,9 +6,9 @@ Top Roller Derby Leagues- lists the top roller derby leagues and provides some i
 
 
 1. Research how to make Gem
-    -use Bundler to create
-    -watch Railscast video on Bundler
-2. Create github repo
+    -use Bundler to create -done
+    -watch Railscast video on Bundler- done
+2. Create github repo- done
 3. plan out gem
 3. Map out user interface- stubbing out executable
 4. discover objects- what is need to make the gem work
@@ -18,20 +18,18 @@ Top Roller Derby Leagues- lists the top roller derby leagues and provides some i
  CLI
  1. Welcome user
  2. list leagues
- 3. give user options
+ 3. give user options: select rank, exit, list
  4. ask for user input
  5. loop through until user exits
 
  League
- 1. League instance
+ 1. instance of league  What makes a league?
     -name
     -rank
     -location
     -url
-2. put league instances in array? or @@all
-3. pull leagues into list by rank
+2. put league instances into an array maybe use @@all?
+3. create a method that list leagues by rank
 
  Scraper
  1. scrape league information
- 2. information into an array? hash?
- 

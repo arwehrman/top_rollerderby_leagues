@@ -1,6 +1,13 @@
-class TopRollerderbyLeagues::League
+class League
 
   attr_accessor :name, :location, :rank, :url
+
+  #create a league instance: name, location, rank, url
+  #store in a array? @@all?
+  #scrape data from website
+  #create list by rank
+
+
 
    def self.list
      league_1 = self.new
@@ -18,9 +25,7 @@ class TopRollerderbyLeagues::League
      [league_1, league_2]
    end
 
-   #create league
-   #create league details- name, rank, location, url
-   #list leagues by rank order order by?
+
 
 
 
