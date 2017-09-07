@@ -1,34 +1,32 @@
-class League
+class TopRollerderbyLeagues::League
 
   attr_accessor :name, :location, :rank, :url
 
-  #create a league instance: name, location, rank, url
-  #store in a array? @@all?
+  @@all = []
+
+  # initialize method? Do I need one?
+  #store leagues in a array? @@all? league?
   #scrape data from website
-  #create list by rank
+  #create list by rank, what is the best way to do this?
+
+  def leagues_list
+    puts ""
+    puts <<~DOC
+    1. Victorian Roller Derby
+    2. Rose City Rollers
+    3. Gotham Roller Derby
+    4. Angel City Roller Derby
+    5. League 5
+    6. League 6
+    7. League 7
+    8. League 8
+    9. league 9
+    10. league 10
+    DOC
+  end
+
+  
 
 
 
-   def self.list
-     league_1 = self.new
-     league_1.name = "Victoria Roller Derby"
-     league_1.location = "Melbourne, VIC, AU"
-     league_1.rank = "1"
-     league_1.url = "https://wftda.com/wftda-leagues/victorian-roller-derby-league/"
-
-     league_2 = self.new
-     league_2.name = "Rose City Rollers"
-     league_2.location = "Portland, OR, US"
-     league_2.rank = "2"
-     league_2.url = "https://wftda.com/wftda-leagues/rose-city-rollers/"
-
-     [league_1, league_2]
-   end
-
-
-
-
-
-
-
-end
+end #ends class
