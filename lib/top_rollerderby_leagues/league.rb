@@ -2,13 +2,8 @@ class TopRollerderbyLeagues::League
 
   attr_accessor :name, :location, :rank, :url
 
-  #need to create leagues with scrape
-  #need to create list of leagues ranked 1- 10
-
-#class variable- class scope
   @@all = []
 
-#instance method
   def initialize(name, location, rank, url)
     @name = name
     @location = location
@@ -17,12 +12,10 @@ class TopRollerderbyLeagues::League
     @@all << self #adding instance to class variable
   end
 
-#class method
   def self.all
     @@all
   end
 
-#class method
 #this needs to pull when a rank is selected
 #may need another method
   def self.league_profile
@@ -36,7 +29,6 @@ class TopRollerderbyLeagues::League
       }
   end
 
-#sorting list of leagues by rank
 #need to change rank to integer in scraped data
   def self.sort_league_by_rank
     self.all.sort{|a, b| a.rank <=> b.rank}.each do |league|
@@ -44,10 +36,16 @@ class TopRollerderbyLeagues::League
     end
   end
 
-#class method
+#need to pull top 10, how?
   def self.leagues_list
     self.all.each {|league| puts "#{league.rank} #{league.name}"}
   end
+
+  def self.find_by_rank(rank)
+    self.all.detect {|league| league.rank == rank}
+  end
+
+
 
 end #ends class
 

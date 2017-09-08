@@ -19,6 +19,8 @@ class TopRollerderbyLeagues::CLI
 
 
 #probably change to an if statement
+#need to pull league profile when rank number is selected
+#right now pulling the entire list, use find_by_rank method?
       def menu
         puts ""
         puts "Welcome to the WFTDA League List"
