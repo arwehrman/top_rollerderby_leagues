@@ -23,6 +23,8 @@ class TopRollerderbyLeagues::League
     @@all
   end
 
+
+
 #class method
 #string data currently- should pull from League attr
   def self.league_profile
@@ -55,7 +57,7 @@ class TopRollerderbyLeagues::League
 end #ends class
 
 
-#test data
+#test data- remove once scrape is working properly
 TopRollerderbyLeagues::League.new("Angel City", "Los Angeles, CA, US", "4", "https://wftda.com/wftda-leagues/angel-city-derby-girls/")
 TopRollerderbyLeagues::League.new("Gotham Roller Derby", "New York City, NY, US", "3", "https://wftda.com/wftda-leagues/gotham-girls-roller-derby/")
 TopRollerderbyLeagues::League.new("Victorian Roller Derby", "Melbourne, VIC, AU", "1", "https://wftda.com/wftda-leagues/victorian-roller-derby-league/")
