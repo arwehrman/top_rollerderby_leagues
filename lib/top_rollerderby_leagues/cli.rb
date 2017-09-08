@@ -7,12 +7,12 @@ class TopRollerderbyLeagues::CLI
         later
       end
 
-#working for now with fake data
+#working  with fake data
       def list_leagues
-        @list = TopRollerderbyLeagues::League.leagues_list
+        @list = TopRollerderbyLeagues::League.sort_league_by_rank
       end
 
-#working for now with fake data
+#working with fake data
       def league_profile
         @profile = TopRollerderbyLeagues::League.league_profile
       end

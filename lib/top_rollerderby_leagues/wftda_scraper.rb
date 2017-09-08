@@ -2,8 +2,9 @@ class WftdaScraper
 attr_accessor :name, :location, :rank, :url
 
 #class method
-# instance into an array- not sure about this keeping for now
+# instance into an array- not sure about this, keeping for now
 # using self.new but probably should change to League.new
+
   def self.scrape_wftda
     league_array = []
     doc = Nokogiri::HTML(open("https://wftda.com/wftda-leagues/"))
