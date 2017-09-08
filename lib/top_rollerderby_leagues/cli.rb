@@ -7,12 +7,16 @@ class TopRollerderbyLeagues::CLI
         later
       end
 
-
+#working for now with fake data
       def list_leagues
-        #will list the top 10 leagues_list
-        # why is new working???
-        @list = TopRollerderbyLeagues::League.new.leagues_list
+        @list = TopRollerderbyLeagues::League.leagues_list
       end
+
+#working for now with fake data
+      def league_profile
+        @profile = TopRollerderbyLeagues::League.league_profile
+      end
+
 
 #probably change to an if statement
       def menu
@@ -25,7 +29,7 @@ class TopRollerderbyLeagues::CLI
         input = gets.strip.downcase
           case input
           when "1"
-            puts "League info ranked 1"
+            league_profile
           when "2"
             puts "League info ranked 2"
           when "3"
