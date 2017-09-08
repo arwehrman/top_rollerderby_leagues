@@ -30,9 +30,9 @@ class TopRollerderbyLeagues::League
   def self.league_profile
     puts <<~DOC
     name: Victorian Roller Derby
-    rank:  1
-    location: Melbourne, VIC, AU
-    url: https://wftda.com/wftda-leagues/victorian-roller-derby-league/
+    rank:  : 1
+    location: : Melbourne, VIC, AU
+    url: : https://wftda.com/wftda-leagues/victorian-roller-derby-league
     DOC
   end
 
@@ -58,7 +58,7 @@ end #ends class
 
 
 #test data- remove once scrape is working properly
-#TopRollerderbyLeagues::League.new("Angel City", "Los Angeles, CA, US", "4", "https://wftda.com/wftda-leagues/angel-city-derby-girls/")
-#TopRollerderbyLeagues::League.new("Gotham Roller Derby", "New York City, NY, US", "3", "https://wftda.com/wftda-leagues/gotham-girls-roller-derby/")
-#TopRollerderbyLeagues::League.new("Victorian Roller Derby", "Melbourne, VIC, AU", "1", "https://wftda.com/wftda-leagues/victorian-roller-derby-league/")
-#TopRollerderbyLeagues::League.new("Rose City Rollers", "Portland, OR, US" ,"2", "https://wftda.com/wftda-leagues/rose-city-rollers/")
+TopRollerderbyLeagues::League.new("Angel City", "Los Angeles, CA, US", "4", "https://wftda.com/wftda-leagues/angel-city-derby-girls/")
+TopRollerderbyLeagues::League.new("Gotham Roller Derby", "New York City, NY, US", "3", "https://wftda.com/wftda-leagues/gotham-girls-roller-derby/")
+TopRollerderbyLeagues::League.new("Victorian Roller Derby", "Melbourne, VIC, AU", "1", "https://wftda.com/wftda-leagues/victorian-roller-derby-league/")
+TopRollerderbyLeagues::League.new("Rose City Rollers", "Portland, OR, US" ,"2", "https://wftda.com/wftda-leagues/rose-city-rollers/")
