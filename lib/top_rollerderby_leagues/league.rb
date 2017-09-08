@@ -2,7 +2,6 @@ class TopRollerderbyLeagues::League
 
   attr_accessor :name, :location, :rank, :url
 
-  #League object- attributes name, location, rank, url
   #need to create leagues with scrape
   #need to create list of leagues ranked 1- 10
   #need to create league profile: name, rank, location, url
@@ -25,7 +24,6 @@ class TopRollerderbyLeagues::League
   end
 
 #class method
-#string data currently- should pull from League attr
   def self.league_profile
     self.all.each {|league|
        puts <<~DOC
@@ -38,10 +36,10 @@ class TopRollerderbyLeagues::League
   end
 
 #class method
-#string data currently- should pull from League attr
   def self.leagues_list
     self.all.each {|league| puts "#{league.rank} #{league.name}"}
   end
+
 end #ends class
 
 
