@@ -7,6 +7,7 @@ class TopRollerderbyLeagues::League
   #need to create list of leagues ranked 1- 10
   #need to create league profile: name, rank, location, url
 
+#class variable- class scope
   @@all = []
 
 #instance method
@@ -15,7 +16,7 @@ class TopRollerderbyLeagues::League
     @location = location
     @rank = rank
     @url = url
-    self.class.all << self
+    @@all << self #adding instance to class variable
   end
 
 #class method
@@ -23,42 +24,35 @@ class TopRollerderbyLeagues::League
     @@all
   end
 
-
-
 #class method
 #string data currently- should pull from League attr
   def self.league_profile
-    puts <<~DOC
-    name: Victorian Roller Derby
-    rank:  : 1
-    location: : Melbourne, VIC, AU
-    url: : https://wftda.com/wftda-leagues/victorian-roller-derby-league
-    DOC
+    self.all.each {|league|
+       puts <<~DOC
+      name: #{league.name}
+      rank: #{league.rank}
+      location: #{league.location}
+      url: #{league.url}
+      DOC
+      }
   end
 
 #class method
 #string data currently- should pull from League attr
   def self.leagues_list
-    puts ""
-    puts <<~DOC
-    1. Victorian Roller Derby
-    2. Rose City Rollers
-    3. Gotham Roller Derby
-    4. Angel City Roller Derby
-    5. League 5
-    6. League 6
-    7. League 7
-    8. League 8
-    9. league 9
-    10. league 10
-    DOC
+    self.all.each {|league| puts "#{league.rank} #{league.name}"}
   end
-
 end #ends class
 
 
 #test data- remove once scrape is working properly
-TopRollerderbyLeagues::League.new("Angel City", "Los Angeles, CA, US", "4", "https://wftda.com/wftda-leagues/angel-city-derby-girls/")
-TopRollerderbyLeagues::League.new("Gotham Roller Derby", "New York City, NY, US", "3", "https://wftda.com/wftda-leagues/gotham-girls-roller-derby/")
 TopRollerderbyLeagues::League.new("Victorian Roller Derby", "Melbourne, VIC, AU", "1", "https://wftda.com/wftda-leagues/victorian-roller-derby-league/")
 TopRollerderbyLeagues::League.new("Rose City Rollers", "Portland, OR, US" ,"2", "https://wftda.com/wftda-leagues/rose-city-rollers/")
+TopRollerderbyLeagues::League.new("Gotham Roller Derby", "New York City, NY, US", "3", "https://wftda.com/wftda-leagues/gotham-girls-roller-derby/")
+TopRollerderbyLeagues::League.new("Angel City", "Los Angeles, CA, US", "4", "https://wftda.com/wftda-leagues/angel-city-derby-girls/")
+TopRollerderbyLeagues::League.new("Denver Roller Derby", "Denver, CO, US", "5", "https://wftda.com/wftda-leagues/denver-roller-derby/")
+TopRollerderbyLeagues::League.new("Texas Roller Girls", "Austin, TX, US", "6", "https://wftda.com/wftda-leagues/texas-rollergirls/")
+TopRollerderbyLeagues::League.new("London Rollergirls", "London, GB", "7", "https://wftda.com/wftda-leagues/london-rollergirls/")
+TopRollerderbyLeagues::League.new("Arch Rival Roller Derby", "Saint Louis, MO, US", "8", "https://wftda.com/wftda-leagues/arch-rival-roller-derby/")
+TopRollerderbyLeagues::League.new("Jacksonville Roller Derby", "Jacksonville, FL, US", "9", "https://wftda.com/wftda-leagues/jacksonville-roller-derby/")
+TopRollerderbyLeagues::League.new("Bay Area Derby", "San Francisco, CA, US", "10", "https://wftda.com/wftda-leagues/bay-area-derby/")
