@@ -23,7 +23,7 @@ class TopRollerderbyLeagues::League
       name: #{league.name}
       rank: #{league.rank}
       location: #{league.location}
-      url: #{league.url}
+      url: #{league.url} 
       DOC
     end
   end

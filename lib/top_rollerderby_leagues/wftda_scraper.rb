@@ -12,6 +12,7 @@ attr_accessor :name, :location, :rank, :url
       member.rank = league_info.search("span.ranking").text.to_i
       member.location = league_info.search("div.league-meta.league-location").text.strip
       member.url = league_info.search("div.league-logo a").attr("href").text.strip
+      #URI.join(https://wftda.com,href).to_s
       league_array << member
     end
     league_array
