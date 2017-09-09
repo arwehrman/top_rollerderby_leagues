@@ -9,7 +9,7 @@ class TopRollerderbyLeagues::CLI
 
 #working  with fake data
       def list_leagues
-        @list = TopRollerderbyLeagues::League.sort_league_by_rank
+        @list = TopRollerderbyLeagues::League.top_ten_leagues_list
       end
 
 #working with fake data

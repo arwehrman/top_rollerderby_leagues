@@ -29,22 +29,18 @@ class TopRollerderbyLeagues::League
       }
   end
 
-#need to change rank to integer in scraped data
-  def self.sort_league_by_rank
-    self.all.sort{|a, b| a.rank <=> b.rank}.each do |league|
+#save just incase
+  #def self.sort_league_by_rank
+    #self.all.sort{|a, b| a.rank <=> b.rank}.each do |league|
+      #puts "#{league.rank}. #{league.name}"
+    #end
+  #end
+
+  def self.top_ten_leagues_list
+    self.all.select {|league| league.rank <= 10}.sort{|a, b| a.rank <=> b.rank}.each do |league|
       puts "#{league.rank}. #{league.name}"
     end
   end
-
-#need to pull top 10, how?
-  def self.leagues_list
-    self.all.each {|league| puts "#{league.rank} #{league.name}"}
-  end
-
-  def self.find_by_rank(rank)
-    self.all.detect {|league| league.rank == rank}
-  end
-
 
 
 end #ends class
