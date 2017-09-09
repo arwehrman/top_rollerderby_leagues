@@ -16,6 +16,9 @@ class TopRollerderbyLeagues::League
     @@all
   end
 
+  def save
+    self.class.all << self
+  end
 #takes in arguement of rank to pull profile
   def self.league_profile_rank(rank)
     self.all.select {|league| league.rank == rank}.each do |league|
@@ -23,7 +26,7 @@ class TopRollerderbyLeagues::League
       name: #{league.name}
       rank: #{league.rank}
       location: #{league.location}
-      url: #{league.url} 
+      url: #{league.url}
       DOC
     end
   end
