@@ -16,32 +16,23 @@ class TopRollerderbyLeagues::League
     @@all
   end
 
-#this needs to pull when a rank is selected
-#may need another method
-  def self.league_profile
-    self.all.each {|league|
-       puts <<~DOC
+#takes in arguement of rank to pull profile
+  def self.league_profile_rank(rank)
+    self.all.select {|league| league.rank == rank}.each do |league|
+    puts <<~DOC
       name: #{league.name}
       rank: #{league.rank}
       location: #{league.location}
       url: #{league.url}
       DOC
-      }
+    end
   end
-
-#save just incase
-  #def self.sort_league_by_rank
-    #self.all.sort{|a, b| a.rank <=> b.rank}.each do |league|
-      #puts "#{league.rank}. #{league.name}"
-    #end
-  #end
 
   def self.top_ten_leagues_list
     self.all.select {|league| league.rank <= 10}.sort{|a, b| a.rank <=> b.rank}.each do |league|
       puts "#{league.rank}. #{league.name}"
     end
   end
-
 
 end #ends class
 
@@ -60,3 +51,12 @@ TopRollerderbyLeagues::League.new("Rose City Rollers", "Portland, OR, US" ,2, "h
 TopRollerderbyLeagues::League.new("Bay Area Derby", "San Francisco, CA, US", 10, "https://wftda.com/wftda-leagues/bay-area-derby/")
 TopRollerderbyLeagues::League.new("2 x 4 Roller Derby", "Buenos Aires, AR", 24, "https://wftda.com/wftda-leagues/2-x-4-roller-derby/")
 TopRollerderbyLeagues::League.new("Arizona Roller Derby", "Phonix, AZ, US", 27, "https://wftda.com/wftda-leagues/arizona-roller-derby/")
+
+
+
+#save just in case need later
+  #def self.sort_league_by_rank
+    #self.all.sort{|a, b| a.rank <=> b.rank}.each do |league|
+      #puts "#{league.rank}. #{league.name}"
+    #end
+  #end
