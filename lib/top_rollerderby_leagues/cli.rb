@@ -1,7 +1,7 @@
 class TopRollerderbyLeagues::CLI
 
   def call
-
+    welcome
     list_leagues
     menu
     later
@@ -15,11 +15,15 @@ class TopRollerderbyLeagues::CLI
     @profile = TopRollerderbyLeagues::League.league_profile
   end
 
+  def welcome
+    puts ""
+    puts "Welcome to the WFTDA League List".colorize(:magenta)
+    puts ""
+  end
+
   def menu
     puts ""
-    puts "Welcome to the WFTDA League List"
-    puts ""
-    puts "Please enter rank number to see more information on league, list  or exit : "
+    puts "Please enter rank number to see more information on league, list  or exit : ".colorize(:magenta)
     input = nil
     while input != "exit"
     input = gets.strip.downcase
@@ -31,14 +35,17 @@ class TopRollerderbyLeagues::CLI
     when input.to_i >=1 && input.to_i <=10
       TopRollerderbyLeagues::League.league_profile_rank(input.to_i)
     else
-      puts "Invalid entry. Please enter rank number, list or exit: "
+      puts ""
+      puts "Invalid entry. Please enter rank number, list or exit: ".colorize(:magenta)
+      puts ""
       end
     end
   end
 
   def later
     puts ""
-    puts "Thanks for checking out WFTDA League list"
+    puts ColorizedString["Thanks for checking out WFTDA League list"].colorize(:magenta)
+    puts ""
   end
 
 end
