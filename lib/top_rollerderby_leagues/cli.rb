@@ -1,7 +1,10 @@
 class TopRollerderbyLeagues::CLI
 
 
+
+
       def call
+        
         list_leagues
         menu
         later
@@ -9,7 +12,7 @@ class TopRollerderbyLeagues::CLI
 
 #working  with fake data
       def list_leagues
-        @list = TopRollerderbyLeagues::League.top_ten_leagues_list
+        TopRollerderbyLeagues::League.top_ten_leagues_list
       end
 
 #working with fake data
@@ -20,7 +23,6 @@ class TopRollerderbyLeagues::CLI
 
 #probably change to an if statement
 #need to pull league profile when rank number is selected
-#right now pulling the entire list, use find_by_rank method?
       def menu
         puts ""
         puts "Welcome to the WFTDA League List"

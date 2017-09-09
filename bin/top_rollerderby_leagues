@@ -3,4 +3,6 @@
 require "bundler/setup"
 require "top_rollerderby_leagues"
 
+WftdaScraper.scrape_wftda
+
 TopRollerderbyLeagues::CLI.new.call

@@ -3,8 +3,6 @@ create CLI Application Gem
 Top Roller Derby Leagues- lists the top roller derby leagues and provides some information on them
 
 
-
-
 1. Research how to make Gem
     -use Bundler to create -done
     -watch Railscast video on Bundler- done
@@ -28,7 +26,9 @@ Top Roller Derby Leagues- lists the top roller derby leagues and provides some i
     -location
     -url
 2. put league instances into an array maybe use @@all?
-3. create a method that list leagues by rank
+3. create a method that list leagues by rank- done
+4. pull only top 10 leagues- done
+5. method to create league profile
 
  Scraper
  1. scrape league information
