@@ -31,7 +31,7 @@ class TopRollerderbyLeagues::CLI
         input = gets.strip.downcase
           case input
           when "1"
-            league_profile
+            "League info ranked 1"
           when "2"
             puts "League info ranked 2"
           when "3"
