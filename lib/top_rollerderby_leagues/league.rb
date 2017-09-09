@@ -22,8 +22,8 @@ class TopRollerderbyLeagues::League
       location: #{league.location}
       url: #{league.url}
       DOC
-    end
   end
+
 
   def self.top_ten_leagues_list
     self.all.select {|league| league.rank <= 10}.sort{|a, b| a.rank <=> b.rank}.each do |league|
