@@ -12,9 +12,10 @@ class TopRollerderbyLeagues::League
   def save
     self.class.all << self
   end
-#takes in arguement of rank to pull profile
+
   def self.league_profile_rank(rank)
-    self.all.select {|league| league.rank == rank}.each do |league|
+    league = self.all.detect {|league| league.rank == rank}
+
     puts <<~DOC
       name: #{league.name}
       rank: #{league.rank}
