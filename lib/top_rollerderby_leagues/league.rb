@@ -4,13 +4,6 @@ class TopRollerderbyLeagues::League
 
   @@all = []
 
-  def initialize
-    @name = name
-    @location = location
-    @rank = rank
-    @url = url
-    @@all << self #adding instance to class variable
-  end
 
   def self.all
     @@all
