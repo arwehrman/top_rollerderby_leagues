@@ -17,7 +17,7 @@ class TopRollerderbyLeagues::CLI
 
   def welcome
     puts ""
-    puts " Welcome to the WFTDA League List".colorize(:magenta)
+    puts " Welcome to the Top 10 Ranked WFTDA Leagues List".colorize(:magenta)
     puts ""
   end
 
@@ -50,7 +50,7 @@ class TopRollerderbyLeagues::CLI
 
   def later
     puts ""
-    puts " Thanks for checking out WFTDA League list".colorize(:magenta)
+    puts " Thanks for checking out the Top 10 Ranked WFTDA Leagues".colorize(:magenta)
     puts ""
   end
 
